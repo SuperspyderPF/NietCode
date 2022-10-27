@@ -1,0 +1,1 @@
+ groupAnagrams = s => Object.values(s.map(str => ({key: str.split('').sort().join(''), value:str})).reduce( (acc,cur)=> ( Object.assign(acc, {[cur.key]: acc[cur.key] ? [...acc[cur.key], cur.value] : [cur.value]})) ,{}))                 
